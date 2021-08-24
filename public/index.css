@@ -143,7 +143,7 @@ option {
 }
 
 .topic {
-  background: linear-gradient(to right, rgb(252, 250, 166), rgb(249, 253, 22));
+  background: linear-gradient(to right, rgb(247, 247, 247), rgb(252, 255, 99));
   border: 1px solid #bcbcbc;
   border-radius: 3px;
   padding: 26px 20px;
@@ -209,7 +209,7 @@ li:not(:last-child) {
   font-size: 16px;
   color: #000000;
   padding: 25px 6px;
-  background: linear-gradient(to right, rgb(182, 255, 140), rgb(135, 255, 80));
+  background: linear-gradient(to right, rgb(219, 255, 198), rgb(168, 255, 128));
   border: 1px solid #bcbcbc;
   border-radius: 3px;
   width: 100px;
