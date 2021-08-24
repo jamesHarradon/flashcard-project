@@ -1,4 +1,3 @@
-import NewTopicForm from "../../components/NewTopicForm";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import ROUTES from "../../app/routes";
