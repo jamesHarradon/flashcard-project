@@ -79,10 +79,11 @@ export default function NewQuizForm() {
           id="quiz-topic"
           onChange={(e) => setTopicId(e.currentTarget.value)}
           placeholder="Topic"
+          data-testid='select-quiz'
         >
-          <option value="">Topic</option>
+          <option data-testid='topic-options' value="">Topic</option>
           {Object.values(topics).map((topic) => (
-            <option key={topic.id} value={topic.id}>
+            <option data-testid='topic-options' key={topic.id} value={topic.id}>
               {topic.name}
             </option>
           ))}

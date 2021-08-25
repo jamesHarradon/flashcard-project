@@ -39,12 +39,13 @@ export default function NewTopicForm() {
             onChange={(e) => setIcon(e.currentTarget.value)}
             required
             defaultValue="default"
+            data-testid='select'
           >
             <option value="default" disabled hidden>
               Choose an icon
             </option>
             {ALL_ICONS.map(({ name, url }) => (
-              <option key={url} value={url}>
+              <option data-testid='select-option' key={url} value={url}>
                 {name}
               </option>
             ))}
