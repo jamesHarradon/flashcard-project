@@ -88,6 +88,7 @@ export default function NewQuizForm() {
             </option>
           ))}
         </select>
+        
         {cards.map((card, index) => (
           <div key={index} className="card-front-back">
             <input
@@ -107,6 +108,7 @@ export default function NewQuizForm() {
               }
               placeholder="Back"
             />
+            
 
             <button
               onClick={(e) => removeCard(e, index)}

@@ -21,18 +21,20 @@ export default function Quizzes() {
 
   return (
     <section className="center">
-      <h1>Quizzes</h1>
-      <ul className="quizzes-list">
-        {Object.values(quizzes).map((quiz) => (
-          <Link key={quiz.id} to={ROUTES.quizRoute(quiz.id)} className='quiz-link'>
-            <li className="quiz">{quiz.name.toUpperCase()}
-            <li className='questions-display'>{quiz.cardIds.length} Card{quiz.cardIds.length > 1 && 's'}</li>
-            </li>
-            
-          </Link>
-        ))}
-      </ul>
-      <Link to={ROUTES.newQuizRoute()} className="button">
+      <h1>All Quizzes</h1>
+      <div className="list-container">
+        <ul className="quizzes-list">
+          {Object.values(quizzes).map((quiz) => (
+            <Link key={quiz.id} to={ROUTES.quizRoute(quiz.id)} className='quiz-link'>
+              <div className="quiz-container">
+                <li className="quiz">{quiz.name.toUpperCase()}</li>
+                <li className='questions-display'>{quiz.cardIds.length} Question{quiz.cardIds.length > 1 && 's'}</li>
+              </div>
+            </Link>
+          ))}
+        </ul>
+      </div>
+      <Link to={ROUTES.newQuizRoute()} className="button create-new-button">
         Create New Quiz
       </Link>
     </section>

@@ -1,3 +1,49 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+
+ul {
+  list-style: none;
+}
+
+.list-container {
+  width: 80%;
+  margin: 0px auto;
+}
+
+.topics-list,
+.quizzes-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.topic,
+.quiz {
+  width: 200px;
+  height: 200px;
+  background: rgb(248, 143, 143);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+
+
 * {
   font-family: 'Neucha', cursive;
   box-sizing: border-box;
@@ -6,18 +52,17 @@
 html,
 body {
   margin: 0;
-  background-color: #e4e4e4;
 }
 
 nav {
-  background: #b736ff;
+  background: #f7947b;
   display: flex;
-  padding: 24px 36px;
+  padding: 5vh;
 }
 
 nav ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 100%;
   padding: 0;
   margin: 0;
@@ -30,7 +75,7 @@ nav ul li {
 
 nav a {
   color: white;
-  font-size: 20px;
+  font-size: 28px;
   text-decoration: none;
 }
 
@@ -55,22 +100,31 @@ h2 {
 
 button,
 .button {
-  background: #ffffff;
-  border: 1px solid #03a8d8;
+  background: #f7947b;
+  border: none;
   border-radius: 20px;
   text-align: center;
   font-weight: bold;
   font-size: 18px;
-  color: #03a8d8;
+  color: white;
+  margin: 0px 5px;
   padding: 10px 21px;
   text-decoration: none;
   
+  
 }
 
-.create-new-topic-button {
+.create-new-button {
   margin: 0 auto;
   display: block;
   width: 182px;
+}
+
+.remove-card-button {
+  background-color: white !important; 
+  border: 1px solid black !important;
+  color: black !important;
+  padding: 5px !important;
 }
 
 section {
@@ -83,9 +137,16 @@ select {
   border: 1px solid #979797;
   border-radius: 3px;
   padding: 8px 10px;
-  width: 100%;
+  width: 40%;
   margin-bottom: 16px;
   font-size: 18px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 select:invalid,
@@ -94,16 +155,6 @@ input::placeholder {
   opacity: 1;
 }
 
-.form-section {
-  padding-top: 20px;
-  padding-bottom: 30px;
-}
-
-.center {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-}
 
 section > h1 {
   margin: 0;
@@ -117,19 +168,12 @@ section > h1 {
   justify-content: space-between;
 }
 
-.card-front-back {
-  padding-top: 25px;
-}
 
 .remove-card-button {
   color: #03a8d8;
-  text-align: right;
   font-weight: bold;
   font-size: 16px;
-  margin-left: auto;
   display: block;
-  border: none;
-  padding: unset;
   margin-top: -8px;
 }
 
@@ -143,7 +187,7 @@ option {
 }
 
 .topic {
-  background: linear-gradient(to right, rgb(247, 247, 247), rgb(252, 255, 99));
+  background-color: rgb(162, 249, 255);
   border: 1px solid #bcbcbc;
   border-radius: 3px;
   padding: 26px 20px;
@@ -195,7 +239,8 @@ li:not(:last-child) {
 
 .questions-display {
   color: rgb(255, 255, 255);
-  text-shadow: 1px 1px 1px #585858;
+  
+  
 }
   
 
@@ -208,17 +253,24 @@ li:not(:last-child) {
   font-weight: bold;
   font-size: 16px;
   color: #000000;
-  padding: 25px 6px;
-  background: linear-gradient(to right, rgb(219, 255, 198), rgb(168, 255, 128));
-  border: 1px solid #bcbcbc;
+  padding: 60px;
+  background-color: rgb(131, 248, 184);
   border-radius: 3px;
   width: 100px;
   height: 100px;
   text-align: center;
   margin: 5px !important;
-  text-decoration: none;
-  
-  
+  text-decoration: none; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quiz-container {
+  background-color: rgb(155, 253, 199);
+  border: 1px solid #bcbcbc;
+  text-align: center;
 }
 
 .quiz > a {
@@ -233,12 +285,30 @@ li:not(:last-child) {
 }
 
 .card {
-  background: #b736ff;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f7f586;
   border-radius: 4px;
   border: none;
-  color: white;
-  padding: 73px 44px;
+  font-size: 1.5em;
+  color: black;
+  box-shadow: 2px 2px 2px lightgray;
+  width: 80%;
+  height: 20vh;
+}
+
+
+  
+
+.card-front-back {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 25px;
 }
 
 

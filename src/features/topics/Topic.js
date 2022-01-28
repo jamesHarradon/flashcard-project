@@ -15,17 +15,20 @@ export default function Topic() {
   return (
     <section>
       <img src={topic.icon} alt="" className="topic-icon" />
-      <h1>Topic: {topic.name}</h1>
-      <ul className="quizzes-list">
+      <h1>Quizzes By Topic - {topic.name.toUpperCase()}</h1>
+      <div className="list-container">
+        <ul className="quizzes-list">
         {quizzesForTopic.map((quiz) => (
-          <li className="quiz" key={quiz.id}>
-            <Link to={ROUTES.quizRoute(quiz.id)}>{quiz.name.toUpperCase()}
-            <li className='questions-display'>{quiz.cardIds.length} Card{quiz.cardIds.length > 1 && 's'}</li>
+            <Link key={quiz.id} to={ROUTES.quizRoute(quiz.id)} className='quiz-link'>
+              <div className="quiz-container">
+                <li className="quiz">{quiz.name.toUpperCase()}</li>
+                <li className='questions-display'>{quiz.cardIds.length} Question{quiz.cardIds.length > 1 && 's'}</li>
+              </div>
             </Link>
-          </li>
-        ))}
-      </ul>
-      <Link to="/quizzes/new" className="button center">
+          ))}
+        </ul>
+      </div>
+      <Link to="/quizzes/new" className="button create-new-button">
         Create a New Quiz
       </Link>
     </section>

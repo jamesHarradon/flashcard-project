@@ -25,9 +25,9 @@ export default function NewTopicForm() {
 
   return (
     <section>
+      <h1>Create a new topic</h1>
       <form onSubmit={handleSubmit}>
-        <h1 className="center">Create a new topic</h1>
-        <div className="form-section">
+        
           <input
             id="topic-name"
             type="text"
@@ -50,7 +50,7 @@ export default function NewTopicForm() {
               </option>
             ))}
           </select>
-        </div>
+        
         <button className="center">Add Topic</button>
       </form>
     </section>
